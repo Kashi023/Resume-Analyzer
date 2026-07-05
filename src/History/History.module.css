@@ -1,0 +1,89 @@
+.History{
+    flex:0.8;
+    height:100vh;
+    overflow:auto;
+    padding:50px;
+    background:linear-gradient(
+        135deg,
+        #f9fafb,
+        #e0e7ff,
+        #f3e8ff
+    );
+    box-sizing:border-box;
+}
+
+.HistoryCardBlock{
+    display:grid;
+    gap:30px;
+   grid-template-columns: repeat(3, 1fr);    
+  justify-items:center;
+}
+
+.hiddenCard{
+    display:none;
+}
+
+.fullScreen{
+    width:100%;
+    height:100%;
+    grid-column:1 / -1;
+}
+.feedbackClosed{
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    white-space: pre-wrap;
+    line-height: 1.8;
+}
+
+.feedbackOpen{
+    white-space: pre-wrap;
+    display:block;
+    line-height: 1.8;
+}
+
+/* .active{
+    transform:scale(1.04);
+    box-shadow:0 25px 45px rgba(79,70,229,.25);
+} */
+
+.HistoryCard{
+    width:100%;
+    max-width:330px;
+    background:rgba(255,255,255,0.8);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.4);
+    border-radius:22px;
+    padding:22px;
+    box-sizing:border-box;
+    box-shadow:0 10px 30px rgba(79,70,229,.12);
+    transition:all .35s ease;
+    cursor:pointer;
+}
+
+.HistoryCard:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(79,70,229,.22);
+}
+
+.cardPercentage{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4F46E5,#06B6D4);
+    color:white;
+    font-size:22px;
+    font-weight:700;
+}
+
+
+@media screen and (max-width:780px){
+    .HistoryCardBlock{
+        grid-template-columns:1fr;
+    }
+}
